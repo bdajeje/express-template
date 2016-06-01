@@ -1,0 +1,25 @@
+<!-- LOGIN FORM -->
+<form action="/register" method="post">
+  <div>
+    <label><%= __('firstname') %></label>
+    <input type="text" name="firstname" placeholder="<%= __('firstname') %>" required autofocus />
+  </div>
+  <div>
+    <label><%= __('lastname') %></label>
+    <input type="text" name="lastname" placeholder="<%= __('lastname') %>" required />
+  </div>
+  <div>
+    <label><%= __('email') %></label>
+    <input type="email" name="email" placeholder="<%= __('email') %>" required />
+  </div>
+  <div>
+    <label><%= __('password') %></label>
+    <input type="password" name="password" required min="<%= password_min_length %>" />
+  </div>
+  <div>
+    <label><%= __('password_confirmation') %></label>
+    <input type="password" name="password_verif" required min="<%= password_min_length %>" />
+  </div>
+
+  <button type="submit" class="btn btn-warning btn-lg"><%= __('register') %></button>
+</form>

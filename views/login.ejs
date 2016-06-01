@@ -1,0 +1,16 @@
+<form method="post" action="<%= routes.login.index %>">
+  <div>
+    <label><%= __('email') %></label>
+    <input type="email" name="email" placeholder="<%= __('email') %>" autofocus required />
+  </div>
+  <div>
+    <label><%= __('password') %></label>
+    <input type="password" placeholer="<%= __('password') %>" name="password" required />
+  </div>
+  <div>
+    <input type="submit" value="<%= __('signin') %>" />
+  </div>
+  <div>
+    <a href="<%= routes.lost_password.index.route %>"><%= __('lost_password') %></a>
+  </div>
+</form>

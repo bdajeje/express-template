@@ -1,0 +1,31 @@
+header {
+  margin-bottom: 20px; }
+
+.btn {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid black;
+  background: #111;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s; }
+
+.btn:hover {
+  background-color: white;
+  color: black; }
+
+header .languages {
+  margin: 0;
+  padding: 0;
+  display: inline-block; }
+  header .languages .language {
+    display: inline-block; }
+  header .languages .language.selected {
+    background-color: white;
+    color: black; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unicorn</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/css/index.css' />
+
+    <script src="/js/jquery-2.2.3.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <ul class="languages">
+        <% languages.forEach(function(available_language) {
+          var is_current = available_language == language;
+        %>
+          <li class="language btn <%= (is_current) ? 'selected' : '' %>">
+            <a href="<%= (is_current) ? '#' : routing.generate(routes.language.route, {language: available_language}) %>"><%= available_language %></a>
+          </li>
+        <% }); %>
+      </ul>
+
+      <% if(user) { %>
+        <a href="<%= routes.logout.route %>" class="btn"><%= __('logout') %></a>
+      <% } else { %>
+        <a href="<%= routes.login.route %>" class="btn"><%= __('login') %></a>
+        <a href="<%= routes.register.index.route %>" class="btn"><%= __('register') %></a>
+      <% } %>
+    </header>
+
+    <%- messages() %>
+
+    <div class="body-wrapper">
+      <%- body %>
+    </div>
+
+    <footer></footer>
+
+    <% if(typeof js_scripts !== 'undefined') { %>
+      <% js_scripts.forEach(function(js_script) { %>
+        <script src="/js/<%= js_script %>.js"></script>
+      <% }) %>
+    <% } %>
+
+  </body>
+</html>

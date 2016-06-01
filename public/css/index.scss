@@ -1,0 +1,38 @@
+header {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid black;
+  background: #111;
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+header {
+  .languages{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    .language {
+      display: inline-block;
+    }
+    .language.selected {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
